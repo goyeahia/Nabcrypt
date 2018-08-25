@@ -1,252 +1,59 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Created on Sat Aug 25 11:47:13 2018
 
-from PyQt4 import QtCore, QtGui
+@author: Yeahia Sarker
 
-try:
-    _fromUtf8 = QtCore.QString.fromUtf8
-except AttributeError:
-    def _fromUtf8(s):
-        return s
-
-try:
-    _encoding = QtGui.QApplication.UnicodeUTF8
-    def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig, _encoding)
-except AttributeError:
-    def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig)
-
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(1181, 838)
-        font = QtGui.QFont()
-        font.setPointSize(13)
-        font.setBold(False)
-        font.setWeight(50)
-        MainWindow.setFont(font)
-        self.centralwidget = QtGui.QWidget(MainWindow)
-        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
-        self.verticalLayout = QtGui.QVBoxLayout(self.centralwidget)
-        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
-        self.label_4 = QtGui.QLabel(self.centralwidget)
-        self.label_4.setObjectName(_fromUtf8("label_4"))
-        self.verticalLayout.addWidget(self.label_4)
-        self.textEdit = QtGui.QTextEdit(self.centralwidget)
-        self.textEdit.setObjectName(_fromUtf8("textEdit"))
-        self.verticalLayout.addWidget(self.textEdit)
-        self.label_2 = QtGui.QLabel(self.centralwidget)
-        self.label_2.setObjectName(_fromUtf8("label_2"))
-        self.verticalLayout.addWidget(self.label_2)
-        self.listWidget_3 = QtGui.QListWidget(self.centralwidget)
-        self.listWidget_3.setObjectName(_fromUtf8("listWidget_3"))
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_3.addItem(item)
-        self.verticalLayout.addWidget(self.listWidget_3)
-        self.label_3 = QtGui.QLabel(self.centralwidget)
-        self.label_3.setObjectName(_fromUtf8("label_3"))
-        self.verticalLayout.addWidget(self.label_3)
-        self.listWidget = QtGui.QListWidget(self.centralwidget)
-        self.listWidget.setObjectName(_fromUtf8("listWidget"))
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget.addItem(item)
-        self.verticalLayout.addWidget(self.listWidget)
-        self.label_5 = QtGui.QLabel(self.centralwidget)
-        self.label_5.setObjectName(_fromUtf8("label_5"))
-        self.verticalLayout.addWidget(self.label_5)
-        self.listWidget_2 = QtGui.QListWidget(self.centralwidget)
-        self.listWidget_2.setObjectName(_fromUtf8("listWidget_2"))
-        item = QtGui.QListWidgetItem()
-        self.listWidget_2.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_2.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_2.addItem(item)
-        item = QtGui.QListWidgetItem()
-        self.listWidget_2.addItem(item)
-        self.verticalLayout.addWidget(self.listWidget_2)
-        self.label = QtGui.QLabel(self.centralwidget)
-        self.label.setObjectName(_fromUtf8("label"))
-        self.verticalLayout.addWidget(self.label)
-        self.progressBar = QtGui.QProgressBar(self.centralwidget)
-        self.progressBar.setProperty("value", 24)
-        self.progressBar.setObjectName(_fromUtf8("progressBar"))
-        self.verticalLayout.addWidget(self.progressBar)
-        self.Encrypt = QtGui.QPushButton(self.centralwidget)
-        font = QtGui.QFont()
-        font.setPointSize(17)
-        self.Encrypt.setFont(font)
-        self.Encrypt.setObjectName(_fromUtf8("Encrypt"))
-        self.verticalLayout.addWidget(self.Encrypt)
-        self.Decrypt = QtGui.QPushButton(self.centralwidget)
-        font = QtGui.QFont()
-        font.setPointSize(17)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Decrypt.setFont(font)
-        self.Decrypt.setObjectName(_fromUtf8("Decrypt"))
-        self.verticalLayout.addWidget(self.Decrypt)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1181, 29))
-        self.menubar.setObjectName(_fromUtf8("menubar"))
-        self.menuFIle = QtGui.QMenu(self.menubar)
-        self.menuFIle.setObjectName(_fromUtf8("menuFIle"))
-        self.menuHelp = QtGui.QMenu(self.menubar)
-        self.menuHelp.setObjectName(_fromUtf8("menuHelp"))
-        self.menuAbout = QtGui.QMenu(self.menubar)
-        self.menuAbout.setObjectName(_fromUtf8("menuAbout"))
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtGui.QStatusBar(MainWindow)
-        self.statusbar.setObjectName(_fromUtf8("statusbar"))
-        MainWindow.setStatusBar(self.statusbar)
-        self.actionOpen = QtGui.QAction(MainWindow)
-        self.actionOpen.setObjectName(_fromUtf8("actionOpen"))
-        self.actionOpen_2 = QtGui.QAction(MainWindow)
-        self.actionOpen_2.setObjectName(_fromUtf8("actionOpen_2"))
-        self.actionExit = QtGui.QAction(MainWindow)
-        self.actionExit.setObjectName(_fromUtf8("actionExit"))
-        self.actionHow_To_Use = QtGui.QAction(MainWindow)
-        self.actionHow_To_Use.setObjectName(_fromUtf8("actionHow_To_Use"))
-        self.menuFIle.addAction(self.actionOpen_2)
-        self.menuFIle.addAction(self.actionExit)
-        self.menuHelp.addAction(self.actionHow_To_Use)
-        self.menubar.addAction(self.menuFIle.menuAction())
-        self.menubar.addAction(self.menuHelp.menuAction())
-        self.menubar.addAction(self.menuAbout.menuAction())
-
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
-        self.label_4.setText(_translate("MainWindow", "Enter The Password :", None))
-        self.label_2.setText(_translate("MainWindow", "Select The Hash Algorithm For Salt", None))
-        __sortingEnabled = self.listWidget_3.isSortingEnabled()
-        self.listWidget_3.setSortingEnabled(False)
-        item = self.listWidget_3.item(0)
-        item.setText(_translate("MainWindow", "HAVAL", None))
-        item = self.listWidget_3.item(1)
-        item.setText(_translate("MainWindow", "SHA-1", None))
-        item = self.listWidget_3.item(2)
-        item.setText(_translate("MainWindow", "SHA-2", None))
-        item = self.listWidget_3.item(3)
-        item.setText(_translate("MainWindow", "SHA-384", None))
-        item = self.listWidget_3.item(4)
-        item.setText(_translate("MainWindow", "WHIRLPOOL", None))
-        item = self.listWidget_3.item(5)
-        item.setText(_translate("MainWindow", "MD-2", None))
-        item = self.listWidget_3.item(6)
-        item.setText(_translate("MainWindow", "MD-5", None))
-        item = self.listWidget_3.item(7)
-        item.setText(_translate("MainWindow", "SHA-0", None))
-        item = self.listWidget_3.item(8)
-        item.setText(_translate("MainWindow", "SHA-128", None))
-        item = self.listWidget_3.item(9)
-        item.setText(_translate("MainWindow", "SHA-256", None))
-        item = self.listWidget_3.item(10)
-        item.setText(_translate("MainWindow", "GHOST", None))
-        self.listWidget_3.setSortingEnabled(__sortingEnabled)
-        self.label_3.setText(_translate("MainWindow", "Select The Hash Algorithm", None))
-        __sortingEnabled = self.listWidget.isSortingEnabled()
-        self.listWidget.setSortingEnabled(False)
-        item = self.listWidget.item(0)
-        item.setText(_translate("MainWindow", "RIPEMD-320", None))
-        item = self.listWidget.item(1)
-        item.setText(_translate("MainWindow", "WHIRPOOL", None))
-        item = self.listWidget.item(2)
-        item.setText(_translate("MainWindow", "HAVAL", None))
-        item = self.listWidget.item(3)
-        item.setText(_translate("MainWindow", "GHOST", None))
-        item = self.listWidget.item(4)
-        item.setText(_translate("MainWindow", "MD-2", None))
-        item = self.listWidget.item(5)
-        item.setText(_translate("MainWindow", "MD-5", None))
-        item = self.listWidget.item(6)
-        item.setText(_translate("MainWindow", "SHA-0", None))
-        item = self.listWidget.item(7)
-        item.setText(_translate("MainWindow", "SHA-1", None))
-        item = self.listWidget.item(8)
-        item.setText(_translate("MainWindow", "SHA-2", None))
-        item = self.listWidget.item(9)
-        item.setText(_translate("MainWindow", "SHA-256", None))
-        item = self.listWidget.item(10)
-        item.setText(_translate("MainWindow", "SHA-384", None))
-        item = self.listWidget.item(11)
-        item.setText(_translate("MainWindow", "SHA-512", None))
-        self.listWidget.setSortingEnabled(__sortingEnabled)
-        self.label_5.setText(_translate("MainWindow", "Select The Cryptographic Algortihm", None))
-        __sortingEnabled = self.listWidget_2.isSortingEnabled()
-        self.listWidget_2.setSortingEnabled(False)
-        item = self.listWidget_2.item(0)
-        item.setText(_translate("MainWindow", "DES", None))
-        item = self.listWidget_2.item(1)
-        item.setText(_translate("MainWindow", "AES -256", None))
-        item = self.listWidget_2.item(2)
-        item.setText(_translate("MainWindow", "BLOW FISH", None))
-        item = self.listWidget_2.item(3)
-        item.setText(_translate("MainWindow", "TWO FISH", None))
-        self.listWidget_2.setSortingEnabled(__sortingEnabled)
-        self.label.setText(_translate("MainWindow", "Progress", None))
-        self.Encrypt.setText(_translate("MainWindow", "Encrypt", None))
-        self.Decrypt.setText(_translate("MainWindow", "Decrypt", None))
-        self.menuFIle.setTitle(_translate("MainWindow", "FIle", None))
-        self.menuHelp.setTitle(_translate("MainWindow", "Help", None))
-        self.menuAbout.setTitle(_translate("MainWindow", "About", None))
-        self.actionOpen.setText(_translate("MainWindow", "Open", None))
-        self.actionOpen_2.setText(_translate("MainWindow", "Open", None))
-        self.actionExit.setText(_translate("MainWindow", "Exit", None))
-        self.actionHow_To_Use.setText(_translate("MainWindow", "How To Use", None))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    MainWindow = QtGui.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
-
+"""
+import sys
+import os
+import pyaes
+#import subprocess
+import hashlib, binascii
+class nabcrypt:
+    def __init__(self):
+        """To initilize something """
+        password = ("Enter Password : ")
+        dk = hashlib.pbkdf2_hmac('sha512', password.encode(), b'md5', 100000, dklen = 256)
+        self.key = binascii.hexlify(dk)
+        self.key = self.key[:32]
+        self.mode = pyaes.AESModeOfOperationCTR(self.key)
+        print("WELCOME")
+    def create_file(self):
+        """ It will create a file if the file doesn't exists"""
+        if sys.argv[1].endswith(".nab"):
+            self.decrypt()
+        else:
+            for file in os.listdir():
+                if file == sys.argv[1]:
+                    self.encrypt()
+                else:
+                    self.create_and_encrypt()
+    def encrypt(self):
+        #with open(str(sys.argv[1])) as f:
+        #mode = pyaes.AESModeOfOperationCTR(self.key)
+        with open(str(sys.argv[1])) as input_file:
+            with open(str(sys.argv[1]) + "nab") as output_file:
+                pyaes.encrypt_stream(self.mode, input_file, output_file)
+    def decrypt(self):
+        output_file_name = str(sys.argv[1].split(".")[0])
+        with open(str(sys.argv[1])) as input_file:
+        #print(subprocess.Popen(["echo", "File has been saved"], stdout=subprocess.PIPE).communicate())
+            with open(str(output_file_name)) as output_file:
+                pyaes.decrypt_stream(self.mode, input_file, output_file)
+    def create_and_encrypt(self):
+        with open(str(sys.argv[1])) as input_file:
+            print("Editor mode is on")
+            print("Press CTRL + D to save and exit")
+            while True:
+                input_data = sys.stdin.read()
+                if input_data == "pet":
+                    break
+            print(input_data)
+            print(type(input_data))
+            input_file.write(input_data)
+            with open(str(sys.argv[1]) + "nab") as output_file:
+                pyaes.encrypt_stream(self.mode, input_file, output_file)
+nabcrypt = nabcrypt()
+nabcrypt.create_file()
