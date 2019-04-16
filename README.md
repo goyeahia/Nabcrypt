@@ -1,7 +1,7 @@
-# Nabcrypt
-An open source encrytion editor for security concerned people. 
+# Aescrypt
+An open source encrytion aescrypt for security concerned people. 
 ## Overview
-Nabcrypt is a simple user friendly text editing developed by (Team Ogrodoot)[http://www.team-ogrodoot.com/] which encrypts document with strong encryption algorithm.  Sometimes we often need to store our document securely after wiritng but we don't have much time for encrytion or privacy. That's why we can use this simple text editing tool to automatically save and encrypt our documents. Nabcrypt also offers to encrypt any kind of files. 
+Aescrypt is a simple user friendly data encryption tool which encrypts & decrypts files with strong encryption algorithm. Sometimes we often need to store our document securely after wiritng but we don't have much time for encrytion or privacy. That's why we can use this simple text editing tool to automatically save and encrypt our documents. Nabcrypt also offers to encrypt any kind of files. 
 ## Usage
 - Open up your linux terminal or windows command promt
 - To create a new document or text file, type the command as below
