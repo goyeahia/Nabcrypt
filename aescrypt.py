@@ -6,10 +6,14 @@ Created on Sat Aug 25 11:47:13 2018
 @author: Yeahia Sarker
 
 """
-import sys
+
 import os
 import pyaes
 import hashlib, binascii
+import shutil
+import sys
+import zipfile
+
 class aescrypt:
     def __init__(self):
         """To initilize something """
@@ -28,8 +32,10 @@ class aescrypt:
             self.encrypt()
 
     def encrypt(self):
-        with open(str(sys.argv[1])) as input_file:
-            with open((str(sys.argv[1]) + ".encrypted"), 'wb+') as output_file:
+        shutil.make_archive(((str(sys.argv[1]))),"zip",".",str(sys.argv[1]))
+        input_file_name = (str(sys.argv[1]) + ".zip")
+        with open(input_file_name, encoding = "utf-8", errors = "ignore") as input_file:
+            with open((input_file_name + ".encrypted"), 'wb+') as output_file:
                 pyaes.encrypt_stream(self.mode, input_file, output_file)
 
     def decrypt(self):
@@ -42,3 +48,4 @@ class aescrypt:
             print(e)
 nabcrypt = aescrypt()
 nabcrypt.create_file()
+## Ended Up with a encoding error
