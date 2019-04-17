@@ -9,31 +9,36 @@ Created on Sat Aug 25 11:47:13 2018
 import sys
 import os
 import pyaes
-#import subprocess
 import hashlib, binascii
-class nabcrypt:
+class aescrypt:
     def __init__(self):
         """To initilize something """
-        password = ("Enter Password : ")
-        dk = hashlib.pbkdf2_hmac('sha512', password.encode(), b'md5', 100000, dklen = 256)
+        print("##### WELCOME #####")
+        password = input("Enter The Password : ")
+        dk = hashlib.pbkdf2_hmac('sha512', password.encode(), b'md5', 1000, dklen = 256)
         self.key = binascii.hexlify(dk)
         self.key = self.key[:32]
         self.mode = pyaes.AESModeOfOperationCTR(self.key)
-        print("WELCOME")
+
     def create_file(self):
         """ It will create a file if the file doesn't exists"""
-        if sys.argv[1].endswith(".nab"):
+        if sys.argv[1].endswith(".encrypted"):
             self.decrypt()
         else:
             self.encrypt()
+
     def encrypt(self):
         with open(str(sys.argv[1])) as input_file:
-            with open(str(sys.argv[1]) + "nab") as output_file:
+            with open((str(sys.argv[1]) + ".encrypted"), 'wb+') as output_file:
                 pyaes.encrypt_stream(self.mode, input_file, output_file)
+
     def decrypt(self):
         output_file_name = str(sys.argv[1].split(".")[0])
-        with open(str(sys.argv[1])) as input_file:
-            with open(str(output_file_name)) as output_file:
-                pyaes.decrypt_stream(self.mode, input_file, output_file)
-nabcrypt = nabcrypt()
+        try:
+            with open(str(sys.argv[1])) as input_file:
+                with open((str(output_file_name)), 'wb+') as output_file:
+                    pyaes.decrypt_stream(self.mode, input_file, output_file)
+        except FileNotFoundError as e:
+            print(e)
+nabcrypt = aescrypt()
 nabcrypt.create_file()
