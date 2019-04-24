@@ -1,8 +1,8 @@
 # Aescrypt
 An open source encrytion tool for security concerned people. 
 ## Overview
-* This documentation is not guaranteed to be error-free and is provided "as is" without warranty of any kind. *
-Aescrypt is a simple user friendly data encryption tool which encrypts & decrypts files with strong encryption algorithm. Sometimes we often need to store our document securely after wiritng but we don't have much time for encrytion or privacy. That's why we can use this simple  tool to automatically save and encrypt our documents.
+__This documentation is not guaranteed to be error-free and is provided "as is" without warranty of any kind.__
+Aescrypt is a simple user friendly data encryption tool which encrypts & decrypts files with strong encryption algorithm. Sometimes we often need to store our document securely after wiritng but we don't have much time for encrytion or privacy. That's why we can use this simple  tool to automatically save and encrypt our documents. Note that aescrypt never saves any decrypted data to a disk. It only stores them temporarily in RAM (memory). Even when the volume is mounted, data stored in the volume is still encrypted.
 ## Usage
 - Open up your linux terminal or windows command promt
 - To create a new document or text file, type the command as below
