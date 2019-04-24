@@ -1,12 +1,13 @@
 # Aescrypt
 An open source encrytion tool for security concerned people. 
 ## Overview
+* This documentation is not guaranteed to be error-free and is provided "as is" without warranty of any kind. *
 Aescrypt is a simple user friendly data encryption tool which encrypts & decrypts files with strong encryption algorithm. Sometimes we often need to store our document securely after wiritng but we don't have much time for encrytion or privacy. That's why we can use this simple  tool to automatically save and encrypt our documents.
 ## Usage
 - Open up your linux terminal or windows command promt
 - To create a new document or text file, type the command as below
 ~~~ 
-python nabcrypt newfilename.txt
+python aescrypt newfilename.txt
 ~~~
 - To encrypt old text file or any kinds of file make sure that the exisiting file or document you want to encrypt it is in the same directory or folder. To encrypt, type in the terminal
 ~~~
